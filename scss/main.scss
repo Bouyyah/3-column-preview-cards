@@ -1,0 +1,90 @@
+@import "reset";
+@import "variables";
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $veryLightGray;
+}
+
+.mainCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    margin: 1.5rem;
+    border-radius: .75rem;
+    overflow: hidden;
+
+}
+
+.card{
+    padding: 4rem;
+    height: 45rem;
+    position: relative;
+    &:first-child{
+        background-color: $brightOrange;
+        & button{
+            color: $brightOrange;
+            &:hover{
+                background-color: $brightOrange;
+                color: $veryLightGray;
+            }
+        }
+    }
+    &:nth-child(2){
+        background-color: $darkCyan;
+        & button{
+            color: $darkCyan;
+            &:hover{
+                background-color: $darkCyan;
+                color: $veryLightGray;
+            }
+        }
+    }
+    &:last-child{
+        background-color: $veryDarkCyan;
+        & button{
+            color: $veryDarkCyan;
+            &:hover{
+                background-color: $veryDarkCyan;
+                color: $veryLightGray;
+            }
+        }
+    }
+    &-title{
+        color: $veryLightGray;
+        font-family: 'Big Shoulders Display', cursive;
+        font-weight: 700;
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin: 2rem 0;
+    }
+    &-text{
+        color: $transparentWhite;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 1.5rem;
+    }
+    &-btn{
+        position: absolute;
+        bottom: 5rem;
+        border: none;
+        background-color: $veryLightGray;
+        padding: 1.15rem 3rem;
+        border-radius: 2.5rem;
+        font-family: 'Lexend Deca', sans-serif;
+
+        &:hover{
+
+            border-style: solid;
+            border-width: .2rem;
+            border-color: $veryLightGray;
+        }
+
+    }
+} 
